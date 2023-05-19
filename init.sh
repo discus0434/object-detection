@@ -10,7 +10,7 @@ source /etc/apache2/envvars
 # add ProxyRequests Off
 # add ProxyPass /object_detection http://localhost:8001/object_detection
 # add ProxyPassReverse /object_detection http://localhost:8001/object_detection
-sudo gsed -i 's/<\/VirtualHost>/ProxyRequests Off\nProxyPass \/object_detection http:\/\/localhost:8001\/object_detection\nProxyPassReverse \/object_detection http:\/\/localhost:8001\/object_detection\n<\/VirtualHost>/g' /etc/apache2/sites-enabled/000-default.conf
+sudo sed -i 's/<\/VirtualHost>/ProxyRequests Off\nProxyPass \/object_detection http:\/\/localhost:8001\/object_detection\nProxyPassReverse \/object_detection http:\/\/localhost:8001\/object_detection\n<\/VirtualHost>/g' /etc/apache2/sites-enabled/000-default.conf
 
 cd /home/ubuntu/object-detection/backend
 sudo pip3 install --upgrade pip
