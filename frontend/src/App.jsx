@@ -66,7 +66,7 @@ function App() {
     formData.append("image", selectedImage);
 
     // fetch the image from the backend via localhost
-    fetch("http://localhost:8001/object_detection", {
+    fetch("/object_detection", {
       method: "POST",
       body: formData,
     })
