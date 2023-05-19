@@ -65,7 +65,7 @@ function App() {
     const formData = new FormData();
     formData.append("image", selectedImage);
 
-    fetch("http://127.0.0.1:8000/object_detection", {
+    fetch("http://127.0.0.1:8001/object_detection", {
       method: "POST",
       body: formData,
     })
