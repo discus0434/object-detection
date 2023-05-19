@@ -56,7 +56,7 @@ class Api(FastAPI):
         self.post("/object_detection")(self.object_detection)
         self.add_middleware(
             CORSMiddleware,
-            allow_origins=["http://localhost:3000"],  # アクセスを許可するオリジンを指定
+            allow_origins=["*"],  # アクセスを許可するオリジンを指定
             allow_credentials=True,
             allow_methods=["*"],
             allow_headers=["*"],
